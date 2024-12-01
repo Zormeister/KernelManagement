@@ -32,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F0AA35742CFD039B00EACB26 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0B7694F2CFAED0800043DD0 /* KMNativeProber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KMNativeProber; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B769922CFC52EC00043DD0 /* kernel_collection_builder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kernel_collection_builder.h; sourceTree = "<group>"; };
 		F0CA56E22CFACAC700521F17 /* KernelManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KernelManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +98,7 @@
 		F0B769912CFC521300043DD0 /* ExternalHeaders */ = {
 			isa = PBXGroup;
 			children = (
+				F0AA35742CFD039B00EACB26 /* README.md */,
 				F0B769922CFC52EC00043DD0 /* kernel_collection_builder.h */,
 			);
 			path = ExternalHeaders;
