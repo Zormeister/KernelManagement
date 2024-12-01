@@ -22,7 +22,10 @@ extern NSString *KMExtensionPathForBundleIdentifier(NSString *bundleIdentifier);
 extern enum OSKMErrorCode KMLoadExtensionsWithPaths(NSArray *paths);
 
 /* seg faults, i'd need to run a debugger or smthn */
-//extern enum OSKMErrorCode KMLoadExtensionsWithIdentifiers(NSArray *bundleIdentifiers);
+
+/* errrm so this stemmed from a random tangent where i found out that kmutil dumpstate calls three things 'identifiers' */
+/* idk if the UUID is actually an NSString */
+extern enum OSKMErrorCode KMLoadExtensionsWithIdentifiers(NSString *bundleID, NSString *maybeBundleVersion, NSString *uuid);
 //extern enum OSKMErrorCode KMUnloadExtensionsWithIdentifiers(NSArray *bundleIdentifiers);
 
 int main(int argc, const char * argv[]) {
@@ -44,18 +47,16 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"KMLoadExtensionsWithPaths returned %lx", res);
         }
         NSString *str12 = @"com.apple.kpi.iokit";
-        NSString *str22 = @"com.apple.kext.AMDRadeonX5000HWServices";
         wait(&i);
-        NSArray *arr2 = @[str12, str22];
-        //enum OSKMErrorCode res2 = KMLoadExtensionsWithIdentifiers(arr2);
+        enum OSKMErrorCode res2 = KMLoadExtensionsWithIdentifiers(str12, @"24.0.0" NULL);
 
-        //switch (res2) {
-        //    case OSKMErrorUnpermitted:
-        //        NSLog(@"unpermitted");
-        //        break;
-        //    default:
-        //        NSLog(@"KMLoadExtensionsWithPaths returned %lx", res2);
-        //}
+        switch (res2) {
+            case OSKMErrorUnpermitted:
+                NSLog(@"unpermitted");
+                break;
+            default:
+                NSLog(@"KMLoadExtensionsWithIdentifiers returned %lx", res2);
+        }
     }
     return 0;
 }
