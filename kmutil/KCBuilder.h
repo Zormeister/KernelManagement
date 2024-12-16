@@ -16,12 +16,6 @@
 #include <stdint.h>
 #include <ExternalHeaders/kernel_collection_builder.h>
 
-struct KcBuilderOptions {
-    BinaryStripMode binStripMode;
-    StripMode stripMode;
-    
-};
-
 class KmutilKCBuilder {
 
 public:
@@ -29,4 +23,6 @@ public:
     ~KmutilKCBuilder();
     
     bool addKext(const char *path);
+    
+
 };

@@ -19,13 +19,6 @@
 
 extern NSString *KMExtensionPathForBundleIdentifier(NSString *bundleIdentifier);
 
-extern enum OSKMErrorCode KMLoadExtensionsWithPaths(NSArray *paths);
-
-/* seg faults, i'd need to run a debugger or smthn */
-
-/* errrm so this stemmed from a random tangent where i found out that kmutil dumpstate calls three things 'identifiers' */
-/* idk if the UUID is actually an NSString */
-extern enum OSKMErrorCode KMLoadExtensionsWithIdentifiers(NSString *bundleID, NSString *maybeBundleVersion, NSString *uuid);
 //extern enum OSKMErrorCode KMUnloadExtensionsWithIdentifiers(NSArray *bundleIdentifiers);
 
 int main(int argc, const char * argv[]) {
@@ -37,21 +30,23 @@ int main(int argc, const char * argv[]) {
         int i = 100;
         wait(&i);
         NSArray *arr = @[str1, str2];
-        enum OSKMErrorCode res = KMLoadExtensionsWithPaths(arr);
-        NSLog(@"our ecs: %lx & %lx", OSKMErrorOK, OSKMErrorUnpermitted);
+        NSArray *arr2 = @[ @"/System/Library/Extensions", @"/Library/Extensions" ];
+        enum OSKMErrorCode res = KMLoadExtensionsWithPaths(arr, arr2);
+        NSLog(@"our ecs: %lx & %lx", kOSKMErrorOK, kOSKMErrorInternalError);
         switch (res) {
-            case OSKMErrorUnpermitted:
+            case kOSKMErrorInternalError:
                 NSLog(@"unpermitted");
                 break;
             default:
                 NSLog(@"KMLoadExtensionsWithPaths returned %lx", res);
         }
-        NSString *str12 = @"com.apple.kpi.iokit";
+        NSString *str12 = KMExtensionPathForBundleIdentifier(@"com.apple.iokit.AppleBCM5701Ethernet");
+        NSArray *arr3 = @[ str12 ];
         wait(&i);
-        enum OSKMErrorCode res2 = KMLoadExtensionsWithIdentifiers(str12, @"24.0.0" NULL);
+        enum OSKMErrorCode res2 = KMLoadExtensionsWithIdentifiers(arr3, arr2);
 
         switch (res2) {
-            case OSKMErrorUnpermitted:
+            case kOSKMErrorInternalError:
                 NSLog(@"unpermitted");
                 break;
             default:

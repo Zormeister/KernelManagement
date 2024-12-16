@@ -14,7 +14,18 @@
  */
 
 #include <stdint.h>
+#include <CoreFoundation/CoreFoundation.h>
+#include <ExternalHeaders/kernel_collection_builder.h>
 
 class KmutilOptions {
+
+public:
+    KmutilOptions(int argc, const char *argv[]);
+    ~KmutilOptions();
+    
+private:
+    CFStringRef fKextRepository;
+    CFArrayRef fKextInfo;
+    CFStringRef fVariantString;
     
 };

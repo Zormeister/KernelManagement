@@ -21,12 +21,14 @@ const NSErrorDomain OSKernelManagementErrorDomain = @"Kernel Management";
 static NSString *gSysExtPath = @"/System/Library/Extensions";
 static NSString *gLibExtPath = @"/Library/Extensions";
 
+/* Hypothetically, this should be contacting kernelmanagerd which should then go to the kernel. */
+
 NSString *KMExtensionPathForBundleIdentifier(NSString *bundleIdentifier) {
     /* I can't be bothered implementing this rn */
     return NULL;
 }
 
-enum OSKMErrorCode KMLoadExtensionsWithPaths(NSArray *paths) {
+OSReturn KMLoadExtensionsWithPaths(NSArray *paths, NSArray *dependencyAndFolderPaths) {
     /* I can't be bothered implementing this rn */
-    return OSKMErrorOK;
+    return kOSReturnSuccess;
 }

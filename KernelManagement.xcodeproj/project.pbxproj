@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F0CA57042CFAD49D00521F17 /* KernelManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CA57032CFAD49D00521F17 /* KernelManagement.framework */; };
+		F0AA35752CFD098000EACB26 /* KernelManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CA57032CFAD49D00521F17 /* KernelManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AA35752CFD098000EACB26 /* KernelManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0CA57042CFAD49D00521F17 /* KernelManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
