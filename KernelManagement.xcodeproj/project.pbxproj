@@ -3,15 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F0AA35752CFD098000EACB26 /* KernelManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CA57032CFAD49D00521F17 /* KernelManagement.framework */; };
+		F06534C52D1161A000A64102 /* KernelManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = F06534C12D1161A000A64102 /* KernelManagement.m */; };
+		F06534C62D1161A000A64102 /* KernelManagementPriv.h in Headers */ = {isa = PBXBuildFile; fileRef = F06534C22D1161A000A64102 /* KernelManagementPriv.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F06534C72D1161A000A64102 /* KernelManagement.h in Headers */ = {isa = PBXBuildFile; fileRef = F06534C02D1161A000A64102 /* KernelManagement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F06534CF2D11628B00A64102 /* KCBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F06534CA2D11628B00A64102 /* KCBuilder.cpp */; };
+		F06534D02D11628B00A64102 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F06534CB2D11628B00A64102 /* main.cpp */; };
+		F06534D12D11628B00A64102 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F06534CD2D11628B00A64102 /* Options.cpp */; };
+		F06534D42D11629800A64102 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F06534D22D11629800A64102 /* main.c */; };
+		F06534D72D117ACE00A64102 /* SimpleKernelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F06534D62D117AC200A64102 /* SimpleKernelExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F0B7694D2CFAED0800043DD0 /* CopyFiles */ = {
+		F06534B72D115D8600A64102 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -32,49 +39,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F06534B92D115D8600A64102 /* kernelmanagerd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kernelmanagerd; sourceTree = BUILT_PRODUCTS_DIR; };
+		F06534C02D1161A000A64102 /* KernelManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KernelManagement.h; sourceTree = "<group>"; };
+		F06534C12D1161A000A64102 /* KernelManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KernelManagement.m; sourceTree = "<group>"; };
+		F06534C22D1161A000A64102 /* KernelManagementPriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KernelManagementPriv.h; sourceTree = "<group>"; };
+		F06534C92D11628B00A64102 /* KCBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCBuilder.h; sourceTree = "<group>"; };
+		F06534CA2D11628B00A64102 /* KCBuilder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KCBuilder.cpp; sourceTree = "<group>"; };
+		F06534CB2D11628B00A64102 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F06534CC2D11628B00A64102 /* Options.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Options.h; sourceTree = "<group>"; };
+		F06534CD2D11628B00A64102 /* Options.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Options.cpp; sourceTree = "<group>"; };
+		F06534D22D11629800A64102 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F06534D52D1162D400A64102 /* com.Zormeister.kernelmanagerd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = com.Zormeister.kernelmanagerd.plist; sourceTree = "<group>"; };
+		F06534D62D117AC200A64102 /* SimpleKernelExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleKernelExtension.m; sourceTree = "<group>"; };
 		F0AA35742CFD039B00EACB26 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F0B7694F2CFAED0800043DD0 /* KMNativeProber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KMNativeProber; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B769922CFC52EC00043DD0 /* kernel_collection_builder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kernel_collection_builder.h; sourceTree = "<group>"; };
 		F0CA56E22CFACAC700521F17 /* KernelManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KernelManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CA56FB2CFAD32100521F17 /* kmutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kmutil; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CA57032CFAD49D00521F17 /* KernelManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KernelManagement.framework; path = System/Library/Frameworks/KernelManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F0CA56E92CFACAC700521F17 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			privateHeaders = (
-				KernelManagementPriv.h,
-				KMConfig.h,
-			);
-			publicHeaders = (
-				KernelManagement.h,
-			);
-			target = F0CA56E12CFACAC700521F17 /* KernelManagement */;
-		};
-		F0CA57162CFAE15D00521F17 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				KCBuilder.cpp,
-				main.cpp,
-				Options.cpp,
-			);
-			target = F0CA56FA2CFAD32100521F17 /* kmutil */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F0B769502CFAED0800043DD0 /* KMNativeProber */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = KMNativeProber; sourceTree = "<group>"; };
-		F0CA56E42CFACAC700521F17 /* KernelManagement */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F0CA56E92CFACAC700521F17 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KernelManagement; sourceTree = "<group>"; };
-		F0CA570D2CFAD5C300521F17 /* kmutil */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F0CA57162CFAE15D00521F17 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = kmutil; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		F0B7694C2CFAED0800043DD0 /* Frameworks */ = {
+		F06534B62D115D8600A64102 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0AA35752CFD098000EACB26 /* KernelManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +83,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F06534C42D1161A000A64102 /* KernelManagement */ = {
+			isa = PBXGroup;
+			children = (
+				F06534D62D117AC200A64102 /* SimpleKernelExtension.m */,
+				F06534C02D1161A000A64102 /* KernelManagement.h */,
+				F06534C12D1161A000A64102 /* KernelManagement.m */,
+				F06534C22D1161A000A64102 /* KernelManagementPriv.h */,
+			);
+			path = KernelManagement;
+			sourceTree = "<group>";
+		};
+		F06534CE2D11628B00A64102 /* kmutil */ = {
+			isa = PBXGroup;
+			children = (
+				F06534C92D11628B00A64102 /* KCBuilder.h */,
+				F06534CA2D11628B00A64102 /* KCBuilder.cpp */,
+				F06534CB2D11628B00A64102 /* main.cpp */,
+				F06534CC2D11628B00A64102 /* Options.h */,
+				F06534CD2D11628B00A64102 /* Options.cpp */,
+			);
+			path = kmutil;
+			sourceTree = "<group>";
+		};
+		F06534D32D11629800A64102 /* kernelmanagerd */ = {
+			isa = PBXGroup;
+			children = (
+				F06534D52D1162D400A64102 /* com.Zormeister.kernelmanagerd.plist */,
+				F06534D22D11629800A64102 /* main.c */,
+			);
+			path = kernelmanagerd;
+			sourceTree = "<group>";
+		};
 		F0B769912CFC521300043DD0 /* ExternalHeaders */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +127,10 @@
 		F0CA56D62CFACA8800521F17 = {
 			isa = PBXGroup;
 			children = (
+				F06534D32D11629800A64102 /* kernelmanagerd */,
+				F06534CE2D11628B00A64102 /* kmutil */,
+				F06534C42D1161A000A64102 /* KernelManagement */,
 				F0B769912CFC521300043DD0 /* ExternalHeaders */,
-				F0CA56E42CFACAC700521F17 /* KernelManagement */,
-				F0CA570D2CFAD5C300521F17 /* kmutil */,
-				F0B769502CFAED0800043DD0 /* KMNativeProber */,
 				F0CA57022CFAD49D00521F17 /* Frameworks */,
 				F0CA56E32CFACAC700521F17 /* Products */,
 			);
@@ -121,7 +141,7 @@
 			children = (
 				F0CA56E22CFACAC700521F17 /* KernelManagement.framework */,
 				F0CA56FB2CFAD32100521F17 /* kmutil */,
-				F0B7694F2CFAED0800043DD0 /* KMNativeProber */,
+				F06534B92D115D8600A64102 /* kernelmanagerd */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,32 +161,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06534C62D1161A000A64102 /* KernelManagementPriv.h in Headers */,
+				F06534C72D1161A000A64102 /* KernelManagement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F0B7694E2CFAED0800043DD0 /* KMNativeProber */ = {
+		F06534B82D115D8600A64102 /* kernelmanagerd */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F0B769532CFAED0800043DD0 /* Build configuration list for PBXNativeTarget "KMNativeProber" */;
+			buildConfigurationList = F06534BD2D115D8600A64102 /* Build configuration list for PBXNativeTarget "kernelmanagerd" */;
 			buildPhases = (
-				F0B7694B2CFAED0800043DD0 /* Sources */,
-				F0B7694C2CFAED0800043DD0 /* Frameworks */,
-				F0B7694D2CFAED0800043DD0 /* CopyFiles */,
+				F06534B52D115D8600A64102 /* Sources */,
+				F06534B62D115D8600A64102 /* Frameworks */,
+				F06534B72D115D8600A64102 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				F0B769502CFAED0800043DD0 /* KMNativeProber */,
-			);
-			name = KMNativeProber;
+			name = kernelmanagerd;
 			packageProductDependencies = (
 			);
-			productName = KMNativeProber;
-			productReference = F0B7694F2CFAED0800043DD0 /* KMNativeProber */;
+			productName = kernelmanagerd;
+			productReference = F06534B92D115D8600A64102 /* kernelmanagerd */;
 			productType = "com.apple.product-type.tool";
 		};
 		F0CA56E12CFACAC700521F17 /* KernelManagement */ = {
@@ -181,9 +200,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F0CA56E42CFACAC700521F17 /* KernelManagement */,
 			);
 			name = KernelManagement;
 			packageProductDependencies = (
@@ -220,8 +236,8 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					F0B7694E2CFAED0800043DD0 = {
-						CreatedOnToolsVersion = 16.1;
+					F06534B82D115D8600A64102 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 					F0CA56E12CFACAC700521F17 = {
 						CreatedOnToolsVersion = 16.1;
@@ -247,7 +263,7 @@
 			targets = (
 				F0CA56E12CFACAC700521F17 /* KernelManagement */,
 				F0CA56FA2CFAD32100521F17 /* kmutil */,
-				F0B7694E2CFAED0800043DD0 /* KMNativeProber */,
+				F06534B82D115D8600A64102 /* kernelmanagerd */,
 			);
 		};
 /* End PBXProject section */
@@ -263,10 +279,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F0B7694B2CFAED0800043DD0 /* Sources */ = {
+		F06534B52D115D8600A64102 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06534D42D11629800A64102 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06534D72D117ACE00A64102 /* SimpleKernelExtension.m in Sources */,
+				F06534C52D1161A000A64102 /* KernelManagement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,13 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06534CF2D11628B00A64102 /* KCBuilder.cpp in Sources */,
+				F06534D02D11628B00A64102 /* main.cpp in Sources */,
+				F06534D12D11628B00A64102 /* Options.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F0B769542CFAED0800043DD0 /* Debug */ = {
+		F06534BE2D115D8600A64102 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -322,7 +344,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -342,7 +363,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -351,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		F0B769552CFAED0800043DD0 /* Release */ = {
+		F06534BF2D115D8600A64102 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -386,7 +407,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -400,7 +420,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,7 +509,7 @@
 					"@loader_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
@@ -569,7 +589,7 @@
 					"@loader_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
@@ -641,7 +661,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -701,7 +721,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zormeister.KernelManagement;
@@ -713,11 +733,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F0B769532CFAED0800043DD0 /* Build configuration list for PBXNativeTarget "KMNativeProber" */ = {
+		F06534BD2D115D8600A64102 /* Build configuration list for PBXNativeTarget "kernelmanagerd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F0B769542CFAED0800043DD0 /* Debug */,
-				F0B769552CFAED0800043DD0 /* Release */,
+				F06534BE2D115D8600A64102 /* Debug */,
+				F06534BF2D115D8600A64102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

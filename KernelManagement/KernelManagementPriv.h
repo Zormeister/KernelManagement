@@ -14,21 +14,11 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <KernelManagement/KMConfig.h>
 #import <libkern/OSKextLib.h>
 
 /* ZORMEISTER: This is based on the TBD files from MacOSX15.1.sdk */
 
 FOUNDATION_EXPORT NSErrorDomain const OSKernelManagementErrorDomain;
-
-/* UNKNOWN EXPORTS:
- * - KMExtensionPathForBundleIdentifier
- * - KMLoadExtensionsWithIdentifiers
- * - KMLoadExtensionsWithPaths
- * - KMUnloadExtensionsWithIdentifiers
- */
-
-/* ZORMEISTER: Guessing that we have some enum here considering the ErrorDomain. */
 
 /* considering the fact that OSKernelManagementErrorCode is long as hell, i'm abrieviating it */
 NS_ERROR_ENUM(OSKernelManagementErrorDomain, OSKMErrorCode) {
@@ -45,10 +35,9 @@ FOUNDATION_EXPORT OSReturn KMLoadExtensionsWithIdentifiers(NSArray *identifiers,
 
 FOUNDATION_EXPORT OSReturn KMUnloadExtensionsWithIdentifiers(NSArray *identifiers);
 
+/* I wonder why they kept these headers under wraps. Probably because you can load kexts via IOKitUser. Eh. Oh well. */
 
 #if KM_NO_OBJC_CLASSES == 0
-
-/* Nope. Nope. NOPE. I am NOT touching this. */
 
 @interface SimpleKernelExtension : NSObject
 

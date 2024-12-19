@@ -21,5 +21,3 @@ FOUNDATION_EXPORT double KernelManagementVersionNumber;
 
 //! Project version string for KernelManagement.
 FOUNDATION_EXPORT const unsigned char KernelManagementVersionString[];
-
-/* Have exports defined here? */

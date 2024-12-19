@@ -22,10 +22,18 @@ class KmutilOptions {
 public:
     KmutilOptions(int argc, const char *argv[]);
     ~KmutilOptions();
+
+    
+    CFStringRef getKextRepositoryPath();
+    
+    CFArrayRef getKextPaths();
     
 private:
     CFStringRef fKextRepository;
     CFArrayRef fKextInfo;
     CFStringRef fVariantString;
-    
+    CFStringRef fBundleID;
+    CFStringRef fArch;
+    BinaryStripMode fBinaryStripMode;
+    StripMode fStripMode;
 };
